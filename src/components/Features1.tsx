@@ -41,7 +41,7 @@ const Features1 = () => {
           ))}
         </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 justify-items-center">
           {featuresList.slice(3).map((feature) => (
             <div
               key={feature.name}

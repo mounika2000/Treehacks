@@ -39,6 +39,12 @@ module.exports = {
           },
         },
       },
+      height: {
+        18: '14rem', // or whatever value you need
+      },
+      width: {
+        18: '14rem', // or whatever value you need
+      },
     },
   },
   variants: {},

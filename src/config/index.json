@@ -1,7 +1,7 @@
 {
   "company": {
     "name": "React landing page 2021",
-    "logo": "/assets/images/logo.png"
+    "logo": "/assets/images/logo2.png"
   },
   "navigation": [
     {
@@ -25,7 +25,7 @@
     "title": "Your Partner in",
     "subtitle": "Pet Wellness Journey!",
     "description": "Welcome to Pawsome, where every pet's health and happiness is our passion. Dive into our world of cutting-edge health tools, top-notch pet products, and on-demand expert advice via our AI chatbot. Let's nurture your furry friend's life together - simply, effectively, and joyfully.",
-    "img": "/assets/images/paw3.jpeg",
+    "img": "/assets/images/IMG_4.png",
     "primaryAction": {
       "text": "Get started",
       "href": "#"
@@ -83,17 +83,17 @@
       {
         "name": "Easy",
         "description": "Taking care of your pet should be simple. Check off your daily routine without having to sort through, and sniff out, endless products.",
-        "icon": "/assets/images/pin1.png"
+        "icon": "/assets/images/IMG_1.png"
       },
       {
         "name": "Better",
         "description": "We expect better for ourselves and for our families - including our pups. We use the best ingredients and recycled materials for our pet essentials. What's not to love?",
-        "icon": "/assets/images/pin2.png"
+        "icon": "/assets/images/IMG_2.png"
       },
       {
         "name": "Convenient",
         "description": "We send the essentials right to your door, every month. Cancel anytime, or add-on whatever you want. Maybe you're not into subscriptions? Build your own cart, anytime 24/7.",
-        "icon": "/assets/images/pin3.png"
+        "icon": "/assets/images/IMG_3.png"
       }
     ]
   },
