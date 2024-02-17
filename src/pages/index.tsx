@@ -3,6 +3,7 @@ import React from 'react';
 import About from '../components/About';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
+import Chatbot from '../components/Chatbot';
 import Features1 from '../components/Features1';
 import Features2 from '../components/Features2';
 import Header from '../components/Header';
@@ -33,6 +34,7 @@ const App = () => {
           <Canvas /> */}
         </>
       </LazyShow>
+      <Chatbot />
       <LazyShow>
         <>
           <Features1 />

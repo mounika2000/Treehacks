@@ -48,4 +48,139 @@ a:hover {
   }
 }
 
+/* src/components/Chatbot.css */
+
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-button {
+  /* ... other styles ... */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Make it round */
+  background-color: #fff; /* Set the desired background color, white for example */
+  /* Ensure the width and height are the same to make it a circle */
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Optional: adds a slight shadow for depth */
+}
+
+.chatbot-button img {
+  /* Adjust the size of the image if necessary */
+  width: auto; /* maintain the aspect ratio */
+  height: 80%; /* adjust based on your needs, 80% of the button's height */
+  border-radius: 50%; /* Make the image round */
+}
+
+.chatbot-window {
+  /* Style your chat window here */
+  position: absolute;
+  bottom: 60px; /* Adjust based on the size of your button */
+  right: 0;
+  width: 600px;
+  height: 800px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 10px;
+  background-color:  #e74452;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* .chat-messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+} */
+
+.chat-messages {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  flex-grow: 1; /* Takes up available space between header and input */
+}
+
+.message-bubble {
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #e74452; /* Your brand color for the user */
+  color: white;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #f1f1f1; /* A light color for the bot */
+  color: black;
+}
+
+.bot-message ul {
+  padding-left: 20px; /* Adjust the padding to align list items properly */
+  margin: 0;
+  list-style-type: disc; /* This will create bullets for list items */
+}
+
+
+
+.chat-input-container {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  display: flex;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.send-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chatbot-window {
+  /* ...existing styles... */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the input box stays at the bottom */
+}
+
+
 
