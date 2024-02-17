@@ -1,17 +1,7 @@
 <<<<<<< HEAD
 # Treehacks
 =======
-# React.js landing page template v2
 
-## <a href="https://react-landing-page-template-2021.vercel.app/"> LIVE DEMO</a>
-
-<img src="public/assets/gifs/demo.gif" width="100%" height="auto" />
-
-### Description
-
-This is a React.js/Next.js based landing page plug-n-play template, ideal for startups/companies/service providers wanting to showcase their vision in a single page sleek and modern landing page.
-
-### Features
 
 - 📱  Responsive design
 - 🔥 [Next.js](https://nextjs.org) for Static Site Generator
@@ -78,17 +68,7 @@ You can create an optimised production build with:
 ```
 yarn build-prod
 ```
-
-### Contributions
-
-Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
-
-### License
-
-Licensed under the MIT License, Copyright © 2021
-  
-
-## Liked this template? <a href="https://www.buymeacoffee.com/issaaf">Buy me a coffee ☕️</a>
+\
 
 
 
