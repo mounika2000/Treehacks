@@ -1,0 +1,124 @@
+{
+  "company": {
+    "name": "React landing page 2021",
+    "logo": "/assets/images/logo.png"
+  },
+  "navigation": [
+    {
+      "name": "About",
+      "href": "product"
+    },
+    {
+      "name": "Shop",
+      "href": "features"
+    },
+    {
+      "name": "Fitness",
+      "href": "features2"
+    }
+  ],
+  "callToAction": {
+    "text": "Get started",
+    "href": "#"
+  },
+  "mainHero": {
+    "title": "Your Partner in",
+    "subtitle": "Pet Wellness Journey!",
+    "description": "Welcome to Pawsome, where every pet's health and happiness is our passion. Dive into our world of cutting-edge health tools, top-notch pet products, and on-demand expert advice via our AI chatbot. Let's nurture your furry friend's life together - simply, effectively, and joyfully.",
+    "img": "/assets/images/paw3.jpeg",
+    "primaryAction": {
+      "text": "Get started",
+      "href": "#"
+    },
+    "secondaryAction": {
+      "text": "Email us",
+      "href": "mailto:saimounika.peteti@sjsu.edu?subject=I love Pawsome!"
+    }
+  },
+  "product": {
+    "title": "React landing page 2021",
+    "items": [
+      {
+        "title": "A plug n play template",
+        "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
+        "img": "/assets/images/product1.jpg"
+      }
+    ]
+  },
+  "features": {
+    "title": "Latest & greatest ",
+    "subtitle": "All the best technologies out there!",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+    "items": [
+      {
+        "name": "Treating",
+        "description": "",
+        "icon": "/assets/images/5.png"
+      },
+      {
+        "name": "Feeding",
+        "description": "",
+        "icon": "/assets/images/4.png"
+      },
+      {
+        "name": "Bundles",
+        "description": "",
+        "icon": "/assets/images/3.png"
+      },
+      {
+        "name": "Supplies",
+        "description": "",
+        "icon": "/assets/images/2.png"
+      },
+      {
+        "name": "Shop All",
+        "description": "",
+        "icon": "/assets/images/1.png"
+      }
+    ]
+  },
+  "features2": {
+    "title": "We believe pet care 'should be:'",
+    "items": [
+      {
+        "name": "Easy",
+        "description": "Taking care of your pet should be simple. Check off your daily routine without having to sort through, and sniff out, endless products.",
+        "icon": "/assets/images/pin1.png"
+      },
+      {
+        "name": "Better",
+        "description": "We expect better for ourselves and for our families - including our pups. We use the best ingredients and recycled materials for our pet essentials. What's not to love?",
+        "icon": "/assets/images/pin2.png"
+      },
+      {
+        "name": "Convenient",
+        "description": "We send the essentials right to your door, every month. Cancel anytime, or add-on whatever you want. Maybe you're not into subscriptions? Build your own cart, anytime 24/7.",
+        "icon": "/assets/images/pin3.png"
+      }
+    ]
+  },
+  "about": {
+    "sections": [
+      {
+        "name": "About",
+        "href": "#",
+        "content": ""
+      },
+      {
+        "name": "Shop",
+        "href": "#",
+        "content": ""
+      },
+      {
+        "name": "Fitness",
+        "href": "#",
+        "content": ""
+      }
+    ],
+    "socialMedia": {
+      "github": "https://github.com/mounika2000",
+      "twitter": "https://twitter.com/mounika_2000",
+      "linkedin": "https://www.linkedin.com/in/peteti-sai-mounika/"
+    }
+  }
+}
