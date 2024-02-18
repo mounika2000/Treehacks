@@ -3,6 +3,9 @@
 
 Welcome to Pawsome, the cutting-edge platform dedicated to enhancing the health and fitness of our beloved pets. Combining a deep love for pets with the latest in technology, we provide personalized wellness plans to ensure every pet gets the care they deserve.
 
+<img src="https://github.com/mounika2000/Treehacks/assets/46564084/c19b5611-30e6-4406-ad5e-2436f4ea7ebc" width="100%" alt="treehacks">
+
+
 ## About Pawsome
 
 Pawsome isn't just a project—it's a mission to ensure the well-being of pets worldwide. Our platform offers tools and resources for pet owners to maintain and improve their pet's health and fitness, featuring interactive consultations and tailored fitness schedules. 
@@ -59,7 +62,9 @@ This tech combination enables dynamic, responsive interactions and complex data 
 
 ### Interactive Pet Wellness AI
 
-Pawsome features a static chat button for users to interact with our pet wellness AI. Depending on user needs, it offers appointment booking, medicine orders, or grooming session scheduling.
+Pawsome features a chat button for users to interact with our pet wellness AI. Depending on user needs, it offers appointment booking, medicine orders, or grooming session scheduling.
+<img width="664" alt="Screenshot 2024-02-18 at 1 19 52 AM" src="https://github.com/mounika2000/Treehacks/assets/46564084/cbb3de2a-16c7-4844-a2cd-bec4880e38ae">
+
 
 ### Customized Fitness Center
 
