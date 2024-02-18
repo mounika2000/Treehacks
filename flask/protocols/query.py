@@ -70,7 +70,7 @@ async def handle_query_request(ctx: Context, sender: str, msg: QueryDoctorReques
     ctx.logger.info(
         f"Query: {msg}. Doctor availability: {doctor_availability.available}.")
     await ctx.send(sender, QueryDoctorResponse(doctor_availability=doctor_availability))
-    send_email("")
+    send_email("Appointment Confirmed", "You have booked an appointment")
 
 
 @query_proto.on_query(model=GetTotalQueries, replies=TotalQueries)

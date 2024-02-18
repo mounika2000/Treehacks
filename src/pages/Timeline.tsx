@@ -1,7 +1,6 @@
 import React from 'react';
 
 import WorkIcon from '@material-ui/icons/Work';
-import axios from 'axios';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -10,28 +9,6 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 import Header from '../components/Header';
 import TimelineDes from '../components/TimelineDes';
-
-const scheduleAppointment = async () => {
-  console.log('scheduled appointment');
-
-  try {
-    const response = await axios.get(
-      'http://localhost:105/scheduleAppointment'
-    );
-
-    const { data } = response;
-
-    // Check if data is not null or undefined
-    if (data != null) {
-      // Ensure setSummary is updating the state correctly
-      console.log(data);
-    } else {
-      console.log('Blank response');
-    }
-  } catch (error) {
-    console.error('Error fetching summary:', error);
-  }
-};
 
 function Experience() {
   return (
@@ -56,7 +33,7 @@ function Experience() {
             color: '#333',
             borderRadius: '4px',
           }}
-          icon={<WorkIcon onClick={() => scheduleAppointment()} />}
+          icon={<WorkIcon />}
         >
           <h3 className="vertical-timeline-element-title">Morning Walk</h3>
           <p>

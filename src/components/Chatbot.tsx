@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import axios from 'axios';
 import Popup from 'reactjs-popup';
 
 import 'reactjs-popup/dist/index.css'; // Import default stylesheet
@@ -14,6 +15,8 @@ const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleChatbot = () => setIsOpen(!isOpen);
   const [conversation, setConversation] = useState<Message[]>([]);
+  const [date, setDate] = useState<String | null>(null);
+  const [time, setTime] = useState<String | null>(null);
 
   const containsKeywords = (message: string, keywords: string[]): boolean => {
     return keywords.some((keyword) =>
@@ -23,7 +26,7 @@ const Chatbot: React.FC = () => {
 
   const apiUrl = 'https://api.together.xyz/v1/chat/completions';
   const apiKey =
-    '6b464adb78258c5f74a8b2304d6ddd9a7269fbfd29db358d4c9386b0820b3856';
+    '2c1ede40cd0e1d54cf69bdc7c49cb46521bf239340628600a3afbe164c1bf706';
 
   const headers = new Headers({
     'Content-Type': 'application/json',
@@ -33,7 +36,7 @@ const Chatbot: React.FC = () => {
   const sendRequest = async (messages: { role: string; content: any }[]) => {
     try {
       const data = {
-        model: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+        model: 'mistralai/Mistral-7B-Instruct-v0.2',
         max_tokens: 1024,
         messages,
       };
@@ -52,6 +55,32 @@ const Chatbot: React.FC = () => {
       return null;
       // Instead of throwing, you might want to handle the error gracefully
       // throw new Error('Failed to communicate with the chatbot API');
+    }
+  };
+
+  const scheduleAppointment = async () => {
+    console.log('scheduled appointment');
+    console.log(date);
+    console.log(time);
+    try {
+      const response = await axios.get(
+        'http://localhost:105/scheduleAppointment',
+        {
+          params: { date, time },
+        }
+      );
+
+      const { data } = response;
+
+      // Check if data is not null or undefined
+      if (data != null) {
+        // Ensure setSummary is updating the state correctly
+        console.log(data);
+      } else {
+        console.log('Blank response');
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
     }
   };
 
@@ -150,16 +179,36 @@ const Chatbot: React.FC = () => {
                           </h2>
                           <label className="popup-label">
                             Date:
-                            <input type="date" className="popup-date-input" />
+                            <input
+                              onChange={(e) => {
+                                console.log(e.target.value);
+                                setDate(e.target.value);
+                              }}
+                              type="date"
+                              className="popup-date-input"
+                            />
                           </label>
                           <label className="popup-label">
                             Time:
-                            <input type="time" className="popup-time-input" />
+                            <input
+                              onChange={(e) => {
+                                console.log(e.target.value);
+                                setTime(e.target.value);
+                              }}
+                              type="time"
+                              className="popup-time-input"
+                            />
                           </label>
                           <div className="popup-actions">
                             <button
                               className="popup-confirm-btn"
-                              onClick={close}
+                              onClick={() => {
+                                if (date && time) {
+                                  // Make sure date and time are not null
+                                  scheduleAppointment();
+                                  close(); // Close the popup
+                                }
+                              }}
                             >
                               Confirm
                             </button>

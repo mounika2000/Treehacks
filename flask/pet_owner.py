@@ -18,18 +18,25 @@ pet_owner = Agent(
 fund_agent_if_low(pet_owner.wallet.address())
 
 
-conn = sqlite3.connect('example.db')
-c = conn.cursor()
-c.execute("SELECT * FROM records WHERE agentId='" + pet_owner.address + "'")
-row = c.fetchone()
-conn.close()
+# conn1 = sqlite3.connect('example.db')
+# c1 = conn1.cursor()
+# c1.execute("SELECT * FROM records where id=1231;")
 
-print(row)
+# row = c1.fetchone()
+# print(row)
+# conn1.close()
+
 doctor_query = QueryDoctorRequest(
     pet_type='dog',
     appointment_time=datetime(2024,2,18),
     appointment_duration='2',
 )
+
+# doctor_query = QueryDoctorRequest(
+#     pet_type=row[1],
+#     appointment_time=datetime(row[2]),
+#     appointment_duration='2',
+# )
 
 
 
@@ -44,6 +51,7 @@ async def interval(ctx: Context):
     completed = ctx.storage.get("completed")
     if not completed:
         await ctx.send(pet_clinic_address, doctor_query)
+    os._exit(0)
 
 
 @pet_owner.on_message(QueryDoctorResponse, replies={BookDoctorRequest})

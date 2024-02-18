@@ -3,9 +3,9 @@ import sqlite3
 
 
 def create_db_and_insert_row():
-    conn = sqlite3.connect('example.db')
+    conn = sqlite3. connect('example.db')
     c = conn.cursor()
-    # c.execute('''DROP TABLE records''')
+    c.execute('''DROP TABLE records''')
     c.execute('''CREATE TABLE IF NOT EXISTS records
                  (id INTEGER PRIMARY KEY, pet_type TEXT, date DATETIME, duration INTEGER, agentId TEXT)''')
 

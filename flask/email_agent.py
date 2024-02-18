@@ -42,7 +42,7 @@ async def interval(ctx: Context):
     if now.hour == 5 and now.minute == 0:
         send_email("Morning reminder walk","WALK YOUR DOG!")
         ctx.logger.info(f"in email 1")
-    elif now.hour == 23 and now.minute == 5:
+    elif now.hour == 2 and now.minute == 3:
         send_email('Night reminder food',"FEED YOUR DOG")
         ctx.logger.info(f"in email 2")
     ctx.logger.info(f"emailers")
