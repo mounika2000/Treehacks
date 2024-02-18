@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+import Popup from 'reactjs-popup';
+
+import 'reactjs-popup/dist/index.css'; // Import default stylesheet
+import BookingPopup from './BookingPopUp';
 import MessageBubble from './MessageBubble';
 
 interface Message {
@@ -7,10 +11,16 @@ interface Message {
   content: string;
 }
 
-const Chatbot = () => {
+const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleChatbot = () => setIsOpen(!isOpen);
   const [conversation, setConversation] = useState<Message[]>([]);
+
+  const containsKeywords = (message: string, keywords: string[]): boolean => {
+    return keywords.some((keyword) =>
+      message.toLowerCase().includes(keyword.toLowerCase())
+    );
+  };
 
   const apiUrl = 'https://api.together.xyz/v1/chat/completions';
   const apiKey =
@@ -100,8 +110,30 @@ const Chatbot = () => {
                 <MessageBubble
                   key={index}
                   role={message.role}
-                  content={` ${message.content}`}
+                  content={message.content}
                 />
+                {message.role === 'bot' &&
+                  containsKeywords(message.content, [
+                    'doctor',
+                    'treatment',
+                    'nursing',
+                    'health',
+                  ]) && (
+                    <Popup
+                      trigger={
+                        <button
+                          className="book-appointment-button"
+                          onClick={toggleChatbot}
+                        >
+                          Book an Appointment
+                        </button>
+                      }
+                      modal
+                      nested
+                    >
+                      {(close: () => void) => <BookingPopup close={close} />}
+                    </Popup>
+                  )}
               </div>
             ))}
           </ul>
