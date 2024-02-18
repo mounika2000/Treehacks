@@ -102,9 +102,9 @@ Contributions are welcome! Whether you're a developer, designer, or pet wellness
 
 ## Contact Us
 
-Sai Mounika Peteti: saimounika.peteti@sjsu.edu
-Chinmay Nilesh Mahagaonkar: chinmaynilesh.mahagaonkar@sjsu.edu
-Sanket Kulkarni: sanket.kulkarni@sjsu.edu>
-Tanay Godse: tanay.godse@sjsu.edu>
+Sai Mounika Peteti: saimounika.peteti@sjsu.edu  <br/>
+Chinmay Nilesh Mahagaonkar: chinmaynilesh.mahagaonkar@sjsu.edu <br/>
+Sanket Kulkarni: sanket.kulkarni@sjsu.edu <br/>
+Tanay Godse: tanay.godse@sjsu.edu
 
 
