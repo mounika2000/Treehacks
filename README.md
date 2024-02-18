@@ -83,8 +83,18 @@ We're committed to continuously improving Pawsome with several key initiatives:
 - **Network of Veterinarians**: Establishing a network of doctors available for consultations and emergencies, providing peace of mind for pet owners.
 
 ## Getting Started
+1. Clone repo
+```
+git clone https://github.com/mounika2000/treehacks.git
+cd Treehacks
+yarn
+```
+2. Install dependencies <br/>
+```npm install```  <br/>
+3.Then, you can run locally in development mode with live reload:
+```yarn dev```
 
-(Insert installation, configuration, and usage instructions here, including software requirements and basic tutorials.)
+
 
 ## Contributing
 
