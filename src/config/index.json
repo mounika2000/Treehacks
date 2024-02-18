@@ -39,7 +39,9 @@
     "title": "Paws & Relax: ",
     "subtitle": "A Day in the Life of Your Furry Friend",
     "description": "Every moment counts in the life of your pet. Here's a tail-wagging schedule to keep their tails wagging!",
-    "img": "/assets/images/IMG_4.png",
+    "img1": "/assets/images/IMG_6.png",
+    "img2": "/assets/images/IMG_7.png",
+    "img3": "/assets/images/IMG_8.png",
     "primaryAction": {
       "text": "Get started",
       "href": "#"

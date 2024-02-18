@@ -23,22 +23,17 @@ const TimelineDes = () => {
           <div className="flex justify-between items-center w:80%">
             <img
               className="w-2/3 h-2/3 object-cover"
-              src={timeline.img} // Replace with your actual image path
+              src={timeline.img1} // Replace with your actual image path
               alt="Image description"
             />
             <img
               className="w-2/3 h-2/3 object-cover"
-              src={timeline.img} // Replace with your actual image path
+              src={timeline.img2} // Replace with your actual image path
               alt="Image description"
             />
             <img
               className="w-2/3 h-2/3 object-cover"
-              src={timeline.img} // Replace with your actual image path
-              alt="Image description"
-            />
-            <img
-              className="w-2/3 h-2/3 object-cover"
-              src={timeline.img} // Replace with your actual image path
+              src={timeline.img3} // Replace with your actual image path
               alt="Image description"
             />
           </div>
