@@ -19,9 +19,7 @@ const Menu = () => {
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
         aria-hidden="true"
-      >
-        <polygon points="50,0 100,0 50,100 0,100" />
-      </svg>
+      ></svg>
 
       <Popover>
         <div className="relative pt-6 px-4 sm:px-6 lg:px-8">

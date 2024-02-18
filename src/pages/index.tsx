@@ -13,8 +13,11 @@ import MainHeroImage from '../components/MainHeroImage';
 // import Pricing from '../components/Pricing';
 // import Product from '../components/Product';
 
+// import {PetTypeProvider} from '../components/PetTypeContext';
+
 const App = () => {
   return (
+    // <PetTypeProvider>
     <div className={`bg-background grid gap-y-0 overflow-hidden`}>
       <div className={`relative bg-background`}>
         <div className="max-w-7xl mx-auto">
@@ -55,6 +58,7 @@ const App = () => {
       </LazyShow>
       <Analytics />
     </div>
+    // </PetTypeProvider>
   );
 };
 

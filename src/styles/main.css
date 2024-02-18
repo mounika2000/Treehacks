@@ -182,5 +182,19 @@ a:hover {
   justify-content: space-between; /* Ensures the input box stays at the bottom */
 }
 
-
+.vertical-timeline::before {
+  /* Change the timeline line color */
+  background: rgb(233, 30, 99) !important;
+}
+.vertical-timeline-element-content:hover,
+.vertical-timeline-element-content:hover .vertical-timeline-element-title,
+.vertical-timeline-element-content:hover .vertical-timeline-element-subtitle,
+.vertical-timeline-element-content:hover p {
+  /* Change the text color on hover */
+  color: rgb(233, 30, 99) !important;
+}
+.vertical-timeline-element-icon:hover {
+  /* Change the icon background color on hover */
+  background: rgb(233, 30, 99) !important;
+}
 

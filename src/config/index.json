@@ -35,6 +35,20 @@
       "href": "mailto:saimounika.peteti@sjsu.edu?subject=I love Pawsome!"
     }
   },
+  "timeline": {
+    "title": "Paws & Relax: ",
+    "subtitle": "A Day in the Life of Your Furry Friend",
+    "description": "Every moment counts in the life of your pet. Here's a tail-wagging schedule to keep their tails wagging!",
+    "img": "/assets/images/IMG_4.png",
+    "primaryAction": {
+      "text": "Get started",
+      "href": "#"
+    },
+    "secondaryAction": {
+      "text": "Change Animal",
+      "href": "mailto:saimounika.peteti@sjsu.edu?subject=I love Pawsome!"
+    }
+  },
   "product": {
     "title": "React landing page 2021",
     "items": [
