@@ -6,11 +6,11 @@
   "navigation": [
     {
       "name": "About",
-      "href": "product"
+      "href": "/"
     },
     {
       "name": "Shop",
-      "href": "features"
+      "href": "/"
     },
     {
       "name": "Fitness",
