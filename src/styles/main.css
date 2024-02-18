@@ -8,6 +8,56 @@
   --color-secondary: #a12c34;
   --color-tertiaty: #99a0a3;
 }
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.popup-date-input,
+.popup-time-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.popup-confirm-btn,
+.popup-close-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup-confirm-btn {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.popup-close-btn {
+  background-color: #f44336; /* Red */
+  color: white;
+}
 
 a { 
   @apply text-red-700;

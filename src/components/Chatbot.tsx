@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 
 import 'reactjs-popup/dist/index.css'; // Import default stylesheet
-import BookingPopup from './BookingPopUp';
 import MessageBubble from './MessageBubble';
 
 interface Message {
@@ -121,17 +120,55 @@ const Chatbot: React.FC = () => {
                   ]) && (
                     <Popup
                       trigger={
-                        <button
-                          className="book-appointment-button"
-                          onClick={toggleChatbot}
-                        >
+                        <button className="book-appointment-button">
                           Book an Appointment
                         </button>
                       }
                       modal
                       nested
+                      contentStyle={{
+                        width: '60%', // You might adjust inline styles or move them to CSS
+                        maxWidth: '500px',
+                        padding: '20px',
+                        borderRadius: '10px',
+                        border: '1px solid #ccc',
+                        position: 'absolute',
+                        left: '20%',
+                        top: '10%',
+                        transform: 'translate(-20%, 10%)',
+                        backgroundColor: '#fff',
+                        boxShadow: '0 5px 15px rgba(0,0,0,0.3)',
+                      }}
+                      overlayStyle={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                      }}
                     >
-                      {(close: () => void) => <BookingPopup close={close} />}
+                      {(close: () => void) => (
+                        <div className="popup-content">
+                          <h2 className="popup-header">
+                            Booking an Appointment with Your Pet Doctor
+                          </h2>
+                          <label className="popup-label">
+                            Date:
+                            <input type="date" className="popup-date-input" />
+                          </label>
+                          <label className="popup-label">
+                            Time:
+                            <input type="time" className="popup-time-input" />
+                          </label>
+                          <div className="popup-actions">
+                            <button
+                              className="popup-confirm-btn"
+                              onClick={close}
+                            >
+                              Confirm
+                            </button>
+                            <button className="popup-close-btn" onClick={close}>
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      )}
                     </Popup>
                   )}
               </div>
