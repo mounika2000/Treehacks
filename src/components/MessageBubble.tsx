@@ -27,7 +27,7 @@ const MessageBubble: React.FC<{ role: 'user' | 'bot'; content: string }> = ({
 
   return (
     <div className={`message-bubble ${isBot ? 'bot-message' : 'user-message'}`}>
-      <strong>{isBot ? 'Bot' : 'You'}:</strong>
+      <strong>{isBot ? 'Bot' : 'You'}: </strong>
       {renderContent()}
     </div>
   );

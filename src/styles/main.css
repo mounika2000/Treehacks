@@ -248,3 +248,12 @@ a:hover {
   background: rgb(233, 30, 99) !important;
 }
 
+.book-appointment-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
