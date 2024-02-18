@@ -18,25 +18,34 @@ pet_owner = Agent(
 fund_agent_if_low(pet_owner.wallet.address())
 
 
-# conn1 = sqlite3.connect('example.db')
-# c1 = conn1.cursor()
-# c1.execute("SELECT * FROM records where id=1231;")
+conn1 = sqlite3.connect('example.db')
+c1 = conn1.cursor()
+# SQL query to fetch the latest record for a specific agentId
+query = """
+SELECT * FROM records 
+WHERE agentId='agent1qghwhyknxm46h0wsecjcunnja5tfzcyjqjz6m2pl0snmka68hytd5qnysv5' 
+ORDER BY id DESC;
+"""
 
-# row = c1.fetchone()
-# print(row)
-# conn1.close()
+# Execute the query
+c1.execute(query)
 
-doctor_query = QueryDoctorRequest(
-    pet_type='dog',
-    appointment_time=datetime(2024,2,18),
-    appointment_duration='2',
-)
+# Fetch one record
+row = c1.fetchone()
+print(row)
+conn1.close()
 
 # doctor_query = QueryDoctorRequest(
-#     pet_type=row[1],
-#     appointment_time=datetime(row[2]),
+#     pet_type='dog',
+#     appointment_time=datetime(2024,2,18),
 #     appointment_duration='2',
 # )
+
+doctor_query = QueryDoctorRequest(
+    pet_type=row[1],
+    appointment_time=datetime.strptime(row[2],'%Y-%m-%d %H:%M'),
+    appointment_duration='2',
+)
 
 
 
@@ -48,40 +57,8 @@ def resetComplete(ctx: Context):
 
 @pet_owner.on_interval(period=3.0, messages=QueryDoctorRequest)
 async def interval(ctx: Context):
-    completed = ctx.storage.get("completed")
-    if not completed:
-        await ctx.send(pet_clinic_address, doctor_query)
+    await ctx.send(pet_clinic_address, doctor_query)
     os._exit(0)
-
-
-@pet_owner.on_message(QueryDoctorResponse, replies={BookDoctorRequest})
-async def handle_query_response(ctx: Context, sender: str, msg: QueryDoctorResponse):
-    if msg.doctor_availability.available and len(msg.doctor_availability.appointment_slots) > 0:
-        ctx.logger.info(
-            "there is a free appointment slot, attempting to book now")
-
-        appointment_time = msg.doctor_availability.appointment_slots[0]
-        ctx.storage.set("completed", False)
-        request = BookDoctorRequest(
-            doctor="dr. smith",
-            pet_type=doctor_query.pet_type,
-            appointment_time=appointment_time,
-            appointment_duration=doctor_query.appointment_duration,
-        )
-
-        await ctx.send(sender, request)
-    else:
-        ctx.logger.info("no free appointment slots - nothing more to do")
-        ctx.storage.set("completed", True)
-
-
-@pet_owner.on_message(BookDoctorResponse, replies=set())
-async def handle_book_response(ctx: Context, _sender: str, msg: BookDoctorResponse):
-    if msg.success:
-        ctx.logger.info("appointment booking was successful")
-    else:
-        ctx.logger.info("appointment booking was unsuccessful")
-    ctx.storage.set("completed", True)
 
 if __name__ == "__main__":
     pet_owner.run()
