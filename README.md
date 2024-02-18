@@ -34,6 +34,11 @@ To deliver a seamless, efficient user experience, Pawsome leverages a comprehens
 
 - **Integrations**:
   - Fetch.ai: An artificial intelligence lab working on creating a decentralized digital world.
+  - ![Create daily reminders](https://github.com/mounika2000/Treehacks/assets/55689594/0769a85a-7da7-460c-bd24-6736047d5f68)
+  - ![Create daily reminders (1)](https://github.com/mounika2000/Treehacks/assets/55689594/f724cd3f-a713-48fd-9ec7-25ca500fce49)
+  - ![Create daily reminders (3)](https://github.com/mounika2000/Treehacks/assets/55689594/c535ea0f-8f59-4ba3-bbeb-d32cbd1ceca1)
+
+
   - Together.ai: A platform that provides AI-based solutions.
   - Postman: An API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration.
  
