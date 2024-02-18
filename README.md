@@ -62,7 +62,7 @@ This tech combination enables dynamic, responsive interactions and complex data 
 
 ### Interactive Pet Wellness AI
 
-Pawsome features a chat button for users to interact with our pet wellness AI. Depending on user needs, it offers appointment booking, medicine orders, or grooming session scheduling. //
+Pawsome features a chat button for users to interact with our pet wellness AI. Depending on user needs, it offers appointment booking, medicine orders, or grooming session scheduling. <br> 
 <img src="https://github.com/mounika2000/Treehacks/assets/46564084/cad4921e-dbcd-44d5-b118-6055161ae889" width="60%" alt="treehacks">
 
 ### Customized Fitness Center
